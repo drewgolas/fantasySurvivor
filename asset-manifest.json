@@ -6,7 +6,8 @@
     "index.html": "/fantasySurvivor/index.html",
     "main.9aeb49ad.css.map": "/fantasySurvivor/static/css/main.9aeb49ad.css.map",
     "main.9b9bed8c.js.map": "/fantasySurvivor/static/js/main.9b9bed8c.js.map",
-    "453.05865966.chunk.js.map": "/fantasySurvivor/static/js/453.05865966.chunk.js.map"
+    "453.05865966.chunk.js.map": "/fantasySurvivor/static/js/453.05865966.chunk.js.map",
+    "*/images/*": "*/fantasySurvivor/images/*",
   },
   "entrypoints": [
     "static/css/main.9aeb49ad.css",
