@@ -9,6 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <title>Fantasy Survivor Bracket</title>
     <App />
   </React.StrictMode>
 );

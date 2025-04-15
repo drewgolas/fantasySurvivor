@@ -20,7 +20,7 @@ export function ResultGrid({ category, subtitle, results }: Props) {
         <div className="results-grid">
             <h2 className="result-heading">{category}</h2>
             {subtitle && <h3>{subtitle}</h3>}
-            <div className="result-grid-items">
+            <div className="standard-grid-items">
                 {results.map((result) =>
                     <ResultItem contestant={result.contestant} selections={result.selections} />
                 )}

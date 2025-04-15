@@ -18,11 +18,11 @@ function csvResultsToArr(results: string[], columns: string[]) {
 
 function getImageUrl(result:string) {
     if(result === 'Yes') {
-        return '/images/yes.png';
+        return './images/yes.png';
     }
     if(result === 'No')
-        return '/images/no.png';
-    return `/images/${result}.jpg`;
+        return './images/no.png';
+    return `./images/${result}.jpg`;
 }
 
 export function WeeklyPicks() {

@@ -13,7 +13,7 @@ export function Score() {
                 <p className="contestant-name">{cont.name}</p>
                 <div className="score-update">
                     <div className="sole-survivor">
-                        <img src={`/images/${cont.survivor}.jpg`} />
+                        <img src={`./images/${cont.survivor}.jpg`} />
                         <p>{cont.survivorPoints} points</p>
                     </div>
                     <div className="score">

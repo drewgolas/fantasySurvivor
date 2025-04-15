@@ -32,7 +32,7 @@ export function SeasonPicks() {
                                 contestant: cont.name,
                                 selections: [{
                                     //@ts-expect-error
-                                    img: `/images/${(cont[curPick])}.jpg`,
+                                    img: `./images/${(cont[curPick])}.jpg`,
                                     className: '',
                                 }]
                             }
@@ -49,7 +49,7 @@ export function SeasonPicks() {
                                 contestant: cont.name,
                                 selections: (cont[curPick] || []).map((sel) => {
                                     return {
-                                        img: `/images/${(sel.survivor)}.jpg`,
+                                        img: `./images/${(sel.survivor)}.jpg`,
                                         className: sel.points === 6 ? 'final-three' : 'final-three deducted',
                                     }
                                 })
