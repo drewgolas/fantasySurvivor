@@ -15,7 +15,7 @@ const categories: { [key: string]: string } = {
 export function SeasonPicks() {
     const [curPick, setCurPick] = useState('survivor')
     return (<div>
-        <div>
+        <div className="menu-list">
             {Object.keys(categories).map((key) => {
                 return <button key={categories[key]} className={`menu-button ${curPick === key ? 'selected': ''}`} onClick={() => setCurPick(key)}>{categories[key]}</button>
             })}

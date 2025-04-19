@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <img className="banner-image" src="./images/Survivor_48_Logo.PNG.png" />
-      <div className='menu-list'>
+      <div className='menu-list main-menu'>
         <button className={`menu-button ${currentView === 'Score' ? 'selected': ''}`} onClick={() => setCurrentView('Score')}>Score</button>
         <button className={`menu-button ${currentView === 'Week' ? 'selected': ''}`} onClick={() => setCurrentView('Week')}>Weekly Picks</button>
         <button className={`menu-button ${currentView === 'Season' ? 'selected': ''}`} onClick={() => setCurrentView('Season')}>Season Picks</button>

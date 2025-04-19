@@ -7,6 +7,7 @@ export function Score() {
     const sortedContestants = Contestants.toSorted((a, b) => b.score - a.score)
     const winningScore = sortedContestants[0].score;
     return <div className="standard-grid">
+        <h2 className="result-heading">Score</h2>
         <div className="standard-grid-items">
         {Contestants.map((cont) => {
             return <div>

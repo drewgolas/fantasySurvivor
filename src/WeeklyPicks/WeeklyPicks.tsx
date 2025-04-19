@@ -16,11 +16,11 @@ function csvResultsToArr(results: string[], columns: string[]) {
     return finalResults;
 }
 
-function getImageUrl(result:string) {
-    if(result === 'Yes') {
+function getImageUrl(result: string) {
+    if (result === 'Yes') {
         return './images/yes.png';
     }
-    if(result === 'No')
+    if (result === 'No')
         return './images/no.png';
     return `./images/${result}.jpg`;
 }
@@ -32,23 +32,46 @@ export function WeeklyPicks() {
     const resultRef = csvResultsToArr(results, columns);
     const categories = columns.slice(1);
     return <div>
-        <div>
+        <div className="menu-list">
+            <button className={`menu-button ${curPick === 'scrollView' ? 'selected' : ''}`} onClick={() => setCurPick('scrollView')}>Scrollable Mode</button>
             {categories.map((key) => {
                 return <button key={key} className={`menu-button ${curPick === key ? 'selected' : ''}`} onClick={() => setCurPick(key)}>{key}</button>
             })}
         </div>
-        <ResultGrid
-            category={curPick}
-            results={Contestants
-                .map((cont) => {
-                    return {
-                        contestant: cont.name,
-                        selections: [{
-                            img: getImageUrl(resultRef[curPick][cont.name]),
-                            className: '',
-                        }]
-                    }
-                })}
-        />
+        {
+            curPick != 'scrollView' &&
+            <ResultGrid
+                category={curPick}
+                results={Contestants
+                    .map((cont) => {
+                        return {
+                            contestant: cont.name,
+                            selections: [{
+                                img: getImageUrl(resultRef[curPick][cont.name]),
+                                className: '',
+                            }]
+                        }
+                    })}
+            />
+        }
+        {
+            curPick === 'scrollView' &&
+            columns.filter((col) => col !== 'Name').map((col) => {
+                return <ResultGrid
+                    key={col}
+                    category={col}
+                    results={Contestants
+                        .map((cont) => {
+                            return {
+                                contestant: cont.name,
+                                selections: [{
+                                    img: getImageUrl(resultRef[col][cont.name]),
+                                    className: '',
+                                }]
+                            }
+                        })}
+                />
+            })
+        }
     </div>
 }

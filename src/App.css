@@ -39,6 +39,14 @@ html, body {
   }
 }
 
+.menu-list.main-menu {
+  background: #3c5285;
+}
+
+.menu-list {
+  background: #2c3853
+}
+
 button:hover {
   cursor: pointer;
 }

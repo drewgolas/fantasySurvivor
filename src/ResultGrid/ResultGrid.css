@@ -33,8 +33,7 @@
 
 .result-grid-item {
     padding: 10px;
-    /* background-color: #3d4967; */
-
+    max-width: 400px;
 
     img {
         border-radius: 10px;
