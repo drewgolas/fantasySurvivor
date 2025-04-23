@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fantasySurvivor/static/css/main.8186a11a.css",
-    "main.js": "/fantasySurvivor/static/js/main.9095571f.js",
+    "main.js": "/fantasySurvivor/static/js/main.4247ebf3.js",
     "static/js/453.05865966.chunk.js": "/fantasySurvivor/static/js/453.05865966.chunk.js",
     "index.html": "/fantasySurvivor/index.html",
     "main.8186a11a.css.map": "/fantasySurvivor/static/css/main.8186a11a.css.map",
-    "main.9095571f.js.map": "/fantasySurvivor/static/js/main.9095571f.js.map",
+    "main.4247ebf3.js.map": "/fantasySurvivor/static/js/main.4247ebf3.js.map",
     "453.05865966.chunk.js.map": "/fantasySurvivor/static/js/453.05865966.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8186a11a.css",
-    "static/js/main.9095571f.js"
+    "static/js/main.4247ebf3.js"
   ]
 }
