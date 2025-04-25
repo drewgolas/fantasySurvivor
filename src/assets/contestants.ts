@@ -25,10 +25,10 @@ type Contestant = {
 export const Contestants: Contestant[] = [
         {
         name: 'Jesse',
-        score: 18,
+        score: 21,
         survivor: 'Joe',
         survivorPoints: 16,
-        scoreChange: 6,
+        scoreChange: 3,
         finalThree: [
             {
                 survivor: 'Mary',
@@ -50,10 +50,10 @@ export const Contestants: Contestant[] = [
     },
     {
         name: "Drew",
-        score: 15,
+        score: 18,
         survivor: 'Shauhin',
         survivorPoints: 26,
-        scoreChange: 2,
+        scoreChange: 3,
         finalThree: [
             {
                 survivor: "Shauhin",
@@ -74,10 +74,10 @@ export const Contestants: Contestant[] = [
         medevac: "Joe",
     },
     { name: "Chris",
-        score: 19,
+        score: 24,
         survivor: 'Mary',
         survivorPoints: 20,
-        scoreChange: 4,
+        scoreChange: 6,
         finalThree: [
             {
                 survivor: "Mary",
@@ -99,10 +99,10 @@ export const Contestants: Contestant[] = [
     },
     {
         name: "Kyle",
-        score: 17,
+        score: 22,
         survivor: 'Eva',
         survivorPoints: 24,
-        scoreChange: 4,
+        scoreChange: 5,
         finalThree: [
             {
                 survivor: "Joe",
@@ -124,10 +124,10 @@ export const Contestants: Contestant[] = [
     },
     {
         name: "William",
-        score: 20,
+        score: 22,
         survivor: 'Mary',
         survivorPoints: 14,
-        scoreChange: 4,
+        scoreChange: 2,
         finalThree: [
             {
                 survivor: "Charity",
@@ -149,10 +149,10 @@ export const Contestants: Contestant[] = [
     },
     {
         name: "Marco",
-        score: 15,
+        score: 18,
         survivor: 'Shauhin',
         survivorPoints: 26,
-        scoreChange: 1,
+        scoreChange: 3,
         finalThree: [
             {
                 survivor: "Shauhin",
@@ -174,10 +174,10 @@ export const Contestants: Contestant[] = [
     },
     {
         name: "Kevin",
-        score: 8,
+        score: 14,
         survivor: 'Joe',
         survivorPoints: 18,
-        scoreChange: 10,
+        scoreChange: 4,
         finalThree: [
             {
                 survivor: "Eva",
@@ -199,10 +199,10 @@ export const Contestants: Contestant[] = [
     },
     {
         name:"Roy",
-        score: 8,
+        score: 12,
         survivor: 'Kamilla',
         survivorPoints: 16,
-        scoreChange: 2,
+        scoreChange: 4,
         finalThree: [
             {
                 survivor: "Joe",
