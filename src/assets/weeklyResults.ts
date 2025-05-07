@@ -1,9 +1,9 @@
-export const form_results = `Name,Betrays their tribe,Wins individual immunity,Voted out,Finds an advantage,Uses an advantage,Will Star get 2 or more confessionals?
-Kevin,Kyle,Eva,David,Eva,Eva,No
-Jesse,Kamilla,Mitch,Shauhin,Eva,Eva,Yes
-Chris,Kamilla,Joe,David,Mitch,Eva,Yes
-William,Shauhin,Mary,Shauhin,Eva,Eva,Yes
-Roy,David,Kyle,David,Mitch,Eva,Yes
-Kyle,Kyle,Joe,Mitch,Eva,Eva,Yes
-Marco,Kyle,Mary,Eva,Eva,Eva,Yes
-Drew,Joe,Mitch,David,Eva,Eva,No`
+export const form_results = `Name,Wins individual immunity,Voted out,Finds an adv.,Uses an adv.,Will there be B-roll of Mitch snoozin' when people are strategizing? (Sun-in-the-sky napping)
+Jesse,Kyle,Eva,Mary,Eva,No
+William,Kyle,Mary,Mary,Eva,No
+Chris,Kyle,Mitch,Mary,Eva,No
+Marco,Joe,Shauhin,Kyle,Eva,No
+Roy,Joe,Mary,Mitch,Eva,No
+Drew,Mary,Kamilla,Joe,Eva,No
+Kyle,Kyle,Mary,Shauhin,Eva,No
+Kevin,Eva,Mary,Kyle,Eva,No`
