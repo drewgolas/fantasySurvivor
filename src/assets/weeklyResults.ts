@@ -1,4 +1,4 @@
-export const form_results = `Name,Wins individual immunity,Voted out,Finds an adv.,Uses an adv.,Will there be B-roll of Mitch snoozin' when people are strategizing? (Sun-in-the-sky napping)
+export const form_results = `Name,Wins individual immunity,Voted out,Finds an adv.,Uses an adv.,Mitch Snoozin'
 Jesse,Kyle,Eva,Mary,Eva,No
 William,Kyle,Mary,Mary,Eva,No
 Chris,Kyle,Mitch,Mary,Eva,No
