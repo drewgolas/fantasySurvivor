@@ -1,16 +1,38 @@
 {
   "files": {
     "main.css": "/fantasySurvivor/static/css/main.b674bed3.css",
-    "main.js": "/fantasySurvivor/static/js/main.a208383c.js",
+    "main.js": "/fantasySurvivor/static/js/main.5c2184b7.js",
     "static/js/453.bc297961.chunk.js": "/fantasySurvivor/static/js/453.bc297961.chunk.js",
     "static/media/Survivor_49.png": "/fantasySurvivor/static/media/Survivor_49.7bde35bde9a4fa8c4728.png",
+    "static/media/fullCast.webp": "/fantasySurvivor/static/media/fullCast.2ed755ee82618d0a9655.webp",
+    "static/media/jake.webp": "/fantasySurvivor/static/media/jake.79768b4ebfa1e3a0cf00.webp",
+    "static/media/hina.webp": "/fantasySurvivor/static/media/hina.deca068782399201ee73.webp",
+    "static/media/kele.webp": "/fantasySurvivor/static/media/kele.519f640aa71088bbd23b.webp",
+    "static/media/uli.webp": "/fantasySurvivor/static/media/uli.8b2f591b9e54c8c6f79c.webp",
+    "static/media/matt.webp": "/fantasySurvivor/static/media/matt.a89ee44c73db7f8af088.webp",
+    "static/media/shannon.webp": "/fantasySurvivor/static/media/shannon.46487774456c85f5a2d3.webp",
+    "static/media/sophie.webp": "/fantasySurvivor/static/media/sophie.4740d4c6121e270ac0f5.webp",
+    "static/media/alex.webp": "/fantasySurvivor/static/media/alex.b80762ecc4f761f31352.webp",
+    "static/media/nate.webp": "/fantasySurvivor/static/media/nate.a84ec8d48967ce02531c.webp",
+    "static/media/jeremiah.webp": "/fantasySurvivor/static/media/jeremiah.85047988eee540a24b68.webp",
+    "static/media/annie.webp": "/fantasySurvivor/static/media/annie.4389b36a3ea2e522edd1.webp",
+    "static/media/kristina.webp": "/fantasySurvivor/static/media/kristina.4fabfd072756a51968d3.webp",
+    "static/media/steven.webp": "/fantasySurvivor/static/media/steven.7905af0e9bb839ec859f.webp",
+    "static/media/sophi.webp": "/fantasySurvivor/static/media/sophi.453595f7a15536f449d4.webp",
+    "static/media/michelle.webp": "/fantasySurvivor/static/media/michelle.86ab2516bf15d1c2c029.webp",
+    "static/media/savannah.webp": "/fantasySurvivor/static/media/savannah.bb958ace14d823ed6b4c.webp",
+    "static/media/sage.webp": "/fantasySurvivor/static/media/sage.afa5e6c451f1729dd717.webp",
+    "static/media/jason.webp": "/fantasySurvivor/static/media/jason.4b88056633a9c197944e.webp",
+    "static/media/jawan.webp": "/fantasySurvivor/static/media/jawan.2682dddc3f6236b69f79.webp",
+    "static/media/rizo.webp": "/fantasySurvivor/static/media/rizo.71c85e4aa141dd32e849.webp",
+    "static/media/nicole.webp": "/fantasySurvivor/static/media/nicole.e077b2f4b9d648d19458.webp",
     "index.html": "/fantasySurvivor/index.html",
     "main.b674bed3.css.map": "/fantasySurvivor/static/css/main.b674bed3.css.map",
-    "main.a208383c.js.map": "/fantasySurvivor/static/js/main.a208383c.js.map",
+    "main.5c2184b7.js.map": "/fantasySurvivor/static/js/main.5c2184b7.js.map",
     "453.bc297961.chunk.js.map": "/fantasySurvivor/static/js/453.bc297961.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b674bed3.css",
-    "static/js/main.a208383c.js"
+    "static/js/main.5c2184b7.js"
   ]
 }
