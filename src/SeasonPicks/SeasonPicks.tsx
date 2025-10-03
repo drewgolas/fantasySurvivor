@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { ResultGrid } from "../ResultGrid/ResultGrid"
-import { Contestants } from "../assets/contestants"
+// import { Contestants } from "../assets/contestants"
 import './SeasonPicks.css';
 
 const categories: { [key: string]: string } = {
@@ -20,7 +20,7 @@ export function SeasonPicks() {
                 return <button key={categories[key]} className={`menu-button ${curPick === key ? 'selected': ''}`} onClick={() => setCurPick(key)}>{categories[key]}</button>
             })}
         </div>
-        <div>
+        {/* <div>
             {curPick !== 'finalThree' &&
                 <ResultGrid
                     category={categories[curPick]}
@@ -57,6 +57,6 @@ export function SeasonPicks() {
                         })}
                 />
             }
-        </div>
+        </div> */}
     </div>)
 }

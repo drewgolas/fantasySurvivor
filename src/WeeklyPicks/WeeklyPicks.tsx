@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { form_results } from "../assets/weeklyResults"
 import { ResultGrid } from "../ResultGrid/ResultGrid";
-import { Contestants } from "../assets/contestants";
+// import { Contestants } from "../assets/contestants";
 
 
 function csvResultsToArr(results: string[], columns: string[]) {
@@ -38,7 +38,7 @@ export function WeeklyPicks() {
                 return <button key={key} className={`menu-button ${curPick === key ? 'selected' : ''}`} onClick={() => setCurPick(key)}>{key}</button>
             })}
         </div>
-        {
+        {/* {
             curPick != 'scrollView' &&
             <ResultGrid
                 category={curPick}
@@ -72,6 +72,6 @@ export function WeeklyPicks() {
                         })}
                 />
             })
-        }
+        } */}
     </div>
 }

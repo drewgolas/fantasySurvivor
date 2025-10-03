@@ -3,27 +3,35 @@ import './App.css';
 import { SeasonPicks } from './SeasonPicks/SeasonPicks';
 import { Score } from './Score/Score';
 import { WeeklyPicks } from './WeeklyPicks/WeeklyPicks';
+import { scoreUpdate } from './data/dataConversion';
+const image = require('./assets/images/Survivor_49.png');
 
 function App() {
   const [currentView, setCurrentView] = useState('Score');
+  const onClick = () => {
+    scoreUpdate();
+  }
 
   return (
     <div className="App">
-      <img className="banner-image" src="./images/Survivor_48_Logo.PNG.png" />
+      <img className="banner-image" src={image} />
       <div className='menu-list main-menu'>
         <button className={`menu-button ${currentView === 'Score' ? 'selected': ''}`} onClick={() => setCurrentView('Score')}>Score</button>
         <button className={`menu-button ${currentView === 'Week' ? 'selected': ''}`} onClick={() => setCurrentView('Week')}>Weekly Picks</button>
         <button className={`menu-button ${currentView === 'Season' ? 'selected': ''}`} onClick={() => setCurrentView('Season')}>Season Picks</button>
       </div>
+      {/* <button onClick={onClick}>Update Scores</button> */}
+
       {currentView === 'Score' &&
         <Score />
       }
+      {/*
       {currentView === 'Season' &&
         <SeasonPicks />
       }
       {currentView === 'Week' &&
         <WeeklyPicks />
-      }
+      } */}
     </div>
   );
 }
