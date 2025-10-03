@@ -4,7 +4,7 @@ import './ResultGrid.css';
 export type Results = {
     contestant: string;
     selections: {
-        img: string;
+        pick: string;
         className?: string;
     }[]
 };

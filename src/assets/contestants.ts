@@ -511,6 +511,8 @@ export const Contestants = {
     }
 } as const;
 
+export type WeeklyPickTypes = keyof typeof Contestants.Drew.weeklyPicks;
+
 export type ContestantKey = keyof typeof Contestants;
 
 export const CONTESTANT_LIST: ContestantKey[] = Object.keys(Contestants) as ContestantKey[];

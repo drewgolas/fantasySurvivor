@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { form_results } from "../assets/weeklyResults"
 import { ResultGrid } from "../ResultGrid/ResultGrid";
-// import { Contestants } from "../assets/contestants";
+import { CONTESTANT_LIST, Contestants, WeeklyPickTypes } from "../assets/contestants";
 
 
 function csvResultsToArr(results: string[], columns: string[]) {
@@ -16,21 +15,10 @@ function csvResultsToArr(results: string[], columns: string[]) {
     return finalResults;
 }
 
-function getImageUrl(result: string) {
-    if (result === 'Yes') {
-        return './images/yes.png';
-    }
-    if (result === 'No')
-        return './images/no.png';
-    return `./images/${result}.jpg`;
-}
 
 export function WeeklyPicks() {
-    const [curPick, setCurPick] = useState('Voted out')
-    const results = form_results.trim().split('\n')
-    const columns = results[0].split(',');
-    const resultRef = csvResultsToArr(results, columns);
-    const categories = columns.slice(1);
+    const [curPick, setCurPick] = useState<WeeklyPickTypes | 'scrollView'>('Voted out');
+    const categories = Contestants.Drew ? Object.keys(Contestants.Drew.weeklyPicks) : [];
     return <div>
         <div className="menu-list">
             <button className={`menu-button ${curPick === 'scrollView' ? 'selected' : ''}`} onClick={() => setCurPick('scrollView')}>Scrollable Mode</button>
@@ -38,16 +26,18 @@ export function WeeklyPicks() {
                 return <button key={key} className={`menu-button ${curPick === key ? 'selected' : ''}`} onClick={() => setCurPick(key)}>{key}</button>
             })}
         </div>
-        {/* {
+        {
             curPick != 'scrollView' &&
             <ResultGrid
                 category={curPick}
-                results={Contestants
+                results={CONTESTANT_LIST
                     .map((cont) => {
+                        const contestant = Contestants[cont];
+
                         return {
-                            contestant: cont.name,
+                            contestant: cont,
                             selections: [{
-                                img: getImageUrl(resultRef[curPick][cont.name]),
+                                pick: contestant.weeklyPicks[curPick].pick,
                                 className: '',
                             }]
                         }
@@ -56,22 +46,23 @@ export function WeeklyPicks() {
         }
         {
             curPick === 'scrollView' &&
-            columns.filter((col) => col !== 'Name').map((col) => {
+            categories.map((col) => {
                 return <ResultGrid
                     key={col}
                     category={col}
-                    results={Contestants
+                    results={CONTESTANT_LIST
                         .map((cont) => {
+                            const contestant = Contestants[cont];
                             return {
-                                contestant: cont.name,
+                                contestant: cont,
                                 selections: [{
-                                    img: getImageUrl(resultRef[col][cont.name]),
+                                    pick: contestant.weeklyPicks[col as WeeklyPickTypes].pick,
                                     className: '',
                                 }]
                             }
                         })}
                 />
             })
-        } */}
+        }
     </div>
 }

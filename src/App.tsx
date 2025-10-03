@@ -28,10 +28,10 @@ function App() {
       {/*
       {currentView === 'Season' &&
         <SeasonPicks />
-      }
+      } */}
       {currentView === 'Week' &&
         <WeeklyPicks />
-      } */}
+      }
     </div>
   );
 }

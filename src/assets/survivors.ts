@@ -1,5 +1,7 @@
 type SurvivorInfo = {
+    name: SurvivorKey;
     tribe: TribeKey;
+    img: string;
 }
 
 type TribeInfo = { [key in TribeKey]: {
@@ -35,8 +37,7 @@ export const SURVIVOR_LIST = [
     "Sophi",
     "Sophie",
     "Steven"
-]
-
+] as const
 
 export const Tribes: TribeInfo = {
     Hina: {
@@ -66,3 +67,4 @@ export const Tribes: TribeInfo = {
             "Nate"]
     }
 }
+
