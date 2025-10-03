@@ -10,11 +10,13 @@ export function Score() {
         <div className="standard-grid-items">
         {CONTESTANT_LIST.map((cont) => {
             const contestant = Contestants[cont];
+            const soleSurvivor = contestant.seasonPicks["Sole Survivor"]
+            const image = require(`../assets/images/${soleSurvivor.pick?.toLowerCase()}.webp`);
             return <div>
                 <p className="contestant-name">{cont}</p>
                 <div className="score-update">
                     <div className="sole-survivor">
-                        <img src={`./images/${contestant.seasonPicks["Sole Survivor"]}.webp`} />
+                        <img src={image} />
                         <p>{contestant.seasonPicks["Sole Survivor"].points} points</p>
                     </div>
                     <div className="score">

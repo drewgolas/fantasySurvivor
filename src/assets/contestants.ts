@@ -58,7 +58,7 @@ export const Contestants = {
                 "pick": [
                     "Rizo",
                     "Savannah",
-                    "Sophi B"
+                    "Sophi"
                 ]
             },
             "Sole Survivor": {
@@ -143,7 +143,7 @@ export const Contestants = {
                 "points": 2
             },
             "Finds an advantage/idol/clue": {
-                "pick": "Sophi B",
+                "pick": "Sophi",
                 "points": 1
             },
             "Goes on a journey": {
@@ -159,7 +159,7 @@ export const Contestants = {
             "Final 3": {
                 "pick": [
                     "Savannah",
-                    "Sophie S",
+                    "Sophie",
                     "Steven"
                 ]
             },
@@ -198,7 +198,7 @@ export const Contestants = {
                 "points": 1
             },
             "Goes on a journey": {
-                "pick": "Sophie S",
+                "pick": "Sophie",
                 "points": 1
             }
         }
@@ -210,12 +210,12 @@ export const Contestants = {
             "Final 3": {
                 "pick": [
                     "MC",
-                    "Sophi B",
+                    "Sophi",
                     "Steven"
                 ]
             },
             "Sole Survivor": {
-                "pick": "Sophi B",
+                "pick": "Sophi",
                 "points": 26
             },
             "Worst tribe based on numbers at merge": {
@@ -231,7 +231,7 @@ export const Contestants = {
                 "points": 4
             },
             "Most Confessional Time of the Season": {
-                "pick": "Sophi B",
+                "pick": "Sophi",
                 "points": 8
             }
         },
@@ -262,7 +262,7 @@ export const Contestants = {
                 "pick": [
                     "Matt",
                     "Savannah",
-                    "Sophi B"
+                    "Sophi"
                 ]
             },
             "Sole Survivor": {
@@ -347,7 +347,7 @@ export const Contestants = {
                 "points": 2
             },
             "Finds an advantage/idol/clue": {
-                "pick": "Sophie S",
+                "pick": "Sophie",
                 "points": 1
             },
             "Goes on a journey": {
@@ -414,7 +414,7 @@ export const Contestants = {
             "Final 3": {
                 "pick": [
                     "Alex",
-                    "Sophi B",
+                    "Sophi",
                     "Steven"
                 ]
             },
@@ -466,7 +466,7 @@ export const Contestants = {
                 "pick": [
                     "Alex",
                     "Jawan",
-                    "Sophi B"
+                    "Sophi"
                 ]
             },
             "Sole Survivor": {
