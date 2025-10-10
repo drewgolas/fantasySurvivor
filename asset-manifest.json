@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fantasySurvivor/static/css/main.55e2e676.css",
-    "main.js": "/fantasySurvivor/static/js/main.fb7640be.js",
+    "main.js": "/fantasySurvivor/static/js/main.5c01cb08.js",
     "static/js/453.bc297961.chunk.js": "/fantasySurvivor/static/js/453.bc297961.chunk.js",
     "static/media/Survivor_49.png": "/fantasySurvivor/static/media/Survivor_49.7bde35bde9a4fa8c4728.png",
     "static/media/fullCast.webp": "/fantasySurvivor/static/media/fullCast.2ed755ee82618d0a9655.webp",
@@ -28,11 +28,11 @@
     "static/media/nicole.webp": "/fantasySurvivor/static/media/nicole.e077b2f4b9d648d19458.webp",
     "index.html": "/fantasySurvivor/index.html",
     "main.55e2e676.css.map": "/fantasySurvivor/static/css/main.55e2e676.css.map",
-    "main.fb7640be.js.map": "/fantasySurvivor/static/js/main.fb7640be.js.map",
+    "main.5c01cb08.js.map": "/fantasySurvivor/static/js/main.5c01cb08.js.map",
     "453.bc297961.chunk.js.map": "/fantasySurvivor/static/js/453.bc297961.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.55e2e676.css",
-    "static/js/main.fb7640be.js"
+    "static/js/main.5c01cb08.js"
   ]
 }
