@@ -1,10 +1,10 @@
-export const results = `Timestamp,Name,Sole Survivor (26 points),Who will make the final 3 (6 points each) [Alex],Who will make the final 3 (6 points each) [Annie],Who will make the final 3 (6 points each) [Jake],Who will make the final 3 (6 points each) [Jason],Who will make the final 3 (6 points each) [Jawan],Who will make the final 3 (6 points each) [Jeremiah],Who will make the final 3 (6 points each) [Kristina],Who will make the final 3 (6 points each) [Matt],Who will make the final 3 (6 points each) [MC],Who will make the final 3 (6 points each) [Nate],Who will make the final 3 (6 points each) [Rizo],Who will make the final 3 (6 points each) [Sage],Who will make the final 3 (6 points each) [Savannah],Who will make the final 3 (6 points each) [Shannon],Who will make the final 3 (6 points each) [Sophi],Who will make the final 3 (6 points each) [Sophie],Who will make the final 3 (6 points each) [Steven],Worst tribe based on numbers at merge (5 points),Quits (4 points),Medevacked out (4 points),Most Confessional Time of the Season (8 points),Losing tribe (1 point),Voted out (2 point),Finds an advantage/idol/clue (1 point),Goes on a journey (1 point),Is there any additional categories you want to see in the fantasy draft this season?
-9/29/2025 13:45:45,Kevin,Savannah,,,,,,,,,,,Final Three A,,Final Three B,,Final Three C,,,Kele,Matt,Matt,Rizo,Uli,Jawan,Rizo,Savannah,
-9/29/2025 13:50:54,Chris,Jason,,,,Final Three C,,,,,,Final Three A,,,Final Three B,,,,,Hina,Kristinia,Matt,Rizo,Hina,Kristinia,Sophi,Savannah,
-9/29/2025 16:23:56,William Ridley,Steven,,,,,,,,,,,,,Final Three C,,,Final Three A,Final Three B,Kele,Jeremiah,Jake,Steven,Kele,Annie,Kristinia,Sophie,Plays shot in the dark
-9/30/2025 20:24:17,Jesse ,Sophi,,,,,,,,,Final Three B,,,,,,Final Three A,,Final Three C,Uli,Savannah,Rizo,Sophi,Uli,Nate,Sage,Kristinia,
-9/30/2025 21:21:10,Kyle Macchi,Matt,,,,,,,,Final Three A,,,,,Final Three B,,Final Three C,,,Kele,Kristinia,Steven,Jake,Kele,Annie,Jawan,Jeremiah,
-10/1/2025 14:42:03,Roy,Shannon,,,,,,,,,Final Three C,Final Three B,,,,Final Three A,,,,Kele,Kristinia,Jason,Sage,Hina,Matt,Sophie,Steven,
-10/1/2025 16:08:32,Marco Mendez,Jason,,,,Final Three A,,,Final Three B,,,,,,Final Three C,,,,,Kele,Nate,Jeremiah,Sage,Kele,MC,Jeremiah,Jawan,
-10/1/2025 17:02:45,Drew,Steven,Final Three C,,,,,,,,,,,,,,Final Three B,,Final Three A,Kele,Sage,Nate,Rizo,Kele,Annie,Savannah,MC,
-10/1/2025 18:38:34,Jesse's Older Brtother,Jawan,Final Three B,,,,Final Three A,,,,,,,,,,Final Three C,,,Kele,Jeremiah,MC,Nate,Hina,Steven,Jason,Annie,`
+export const results = `Timestamp,Name,Do you want to change your sole survivor for a decrease in points?,Sole Survivor (24 points),Losing tribe (1 point),Voted out (2 point),Finds an advantage/idol/clue (1 point),Uses an advantage/idol/clue (1 point),Uses SITD (1 point),Goes on a journey (1 point)
+10/6/2025 10:01:35,Jesse,No,,Kele,Kristinia,Savannah,Rizo,Sage,Jeremiah
+10/6/2025 10:05:26,Jesse's Older Brother ,No,,Hina,Matt,Matt,Matt,Matt,Nate
+10/7/2025 1:59:55,Roy,No,,Uli,Jawan,Steven,Alex,Jawan,MC
+10/8/2025 9:17:51,William,No,,Hina,Matt,Steven,Alex,Jeremiah,Sage
+10/8/2025 12:27:04,Marco Mendez,No,,Kele,Jake,Alex,Jeremiah,Sophie,MC
+10/8/2025 14:19:19,Chris,No,,Kele,Jeremiah,Shannon,Alex,Sophi,Savannah
+10/8/2025 18:02:25,Drew,No,,Uli,Shannon,MC,Jawan,Nate,Sophi
+10/8/2025 20:36:22,Kyle Macchi,No,,Uli,Jawan,Savannah,Alex,Jeremiah,Steven
+10/8/2025 22:23:27,Kevin,No,,Uli,Jawan,Rizo,Jawan,Jawan,Jake`

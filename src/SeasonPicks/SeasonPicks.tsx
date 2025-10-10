@@ -2,61 +2,62 @@ import { useState } from "react"
 import { ResultGrid } from "../ResultGrid/ResultGrid"
 // import { Contestants } from "../assets/contestants"
 import './SeasonPicks.css';
+import { CONTESTANT_LIST, Contestants, SeasonPickTypes } from "../assets/contestants";
 
-const categories: { [key: string]: string } = {
-    survivor: 'Sole Survivor',
-    finalThree: 'Final Three',
-    mostConfessionals: "Most Confessionals",
-    worstTribe: "Worst Tribe",
-    quits: "Quits",
-    medevac: "Medevac"
-}
+// const categories: { [key: string]: string } = {
+//     survivor: 'Sole Survivor',
+//     finalThree: 'Final Three',
+//     mostConfessionals: "Most Confessionals",
+//     worstTribe: "Worst Tribe",
+//     quits: "Quits",
+//     medevac: "Medevac"
+// }
 
 export function SeasonPicks() {
-    const [curPick, setCurPick] = useState('survivor')
+    const [curPick, setCurPick] = useState<SeasonPickTypes>('Sole Survivor');
+    const categories = Contestants.Drew ? Object.keys(Contestants.Drew.seasonPicks) as SeasonPickTypes[] : [];
     return (<div>
         <div className="menu-list">
-            {Object.keys(categories).map((key) => {
-                return <button key={categories[key]} className={`menu-button ${curPick === key ? 'selected': ''}`} onClick={() => setCurPick(key)}>{categories[key]}</button>
+            {categories.map((key) => {
+                return <button key={key} className={`menu-button ${curPick === key ? 'selected': ''}`} onClick={() => setCurPick(key)}>{key}</button>
             })}
         </div>
-        {/* <div>
-            {curPick !== 'finalThree' &&
+        <div>
+            {curPick !== 'Final 3' &&
                 <ResultGrid
-                    category={categories[curPick]}
-                    results={Contestants
-                        //@ts-expect-error
-                        .filter((cont) => cont[curPick])
-                        .map((cont) => {
+                    category={curPick}
+                    results={CONTESTANT_LIST
+                            .map((cont) => {
+                            const contestant = Contestants[cont];
                             return {
-                                contestant: cont.name,
-                                selections: [{
-                                    //@ts-expect-error
-                                    img: `./images/${(cont[curPick])}.jpg`,
-                                    className: '',
-                                }]
+                                contestant: cont,
+
+                            selections: [{
+                                pick: contestant.seasonPicks[curPick].pick,
+                                className: '',
+                            }]
                             }
                         })}
                 />
             }
-            {curPick === 'finalThree' &&
+            {curPick === 'Final 3' &&
                 <ResultGrid
-                    category={categories[curPick]}
-                    results={Contestants
-                        .filter((cont) => cont[curPick])
-                        .map((cont) => {
+                    category={curPick}
+                    results={CONTESTANT_LIST
+                            .map((cont) => {
+                            const contestant = Contestants[cont];
                             return {
-                                contestant: cont.name,
-                                selections: (cont[curPick] || []).map((sel) => {
+                                contestant: cont,
+                                selections: (contestant.seasonPicks['Final 3']?.pick || []).map((sel) => {
                                     return {
-                                        img: `./images/${(sel.survivor)}.jpg`,
-                                        className: sel.points === 6 ? 'final-three' : 'final-three deducted',
+                                        pick: sel,
+                                        className: 'final-three',
                                     }
                                 })
                             }
                         })}
                 />
             }
-        </div> */}
+        </div>
     </div>)
 }

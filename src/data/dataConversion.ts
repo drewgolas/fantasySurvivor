@@ -1,11 +1,17 @@
-import { SeasonPickKey, SeasonPickPoints, SeasonPicks, WeeklyPicksTranslations } from "../assets/contestants";
+import { ContestantKey, Contestants, ContestantScore, SeasonPickKey, SeasonPickPoints, SeasonPicks, WeeklyPicksTranslations } from "../assets/contestants";
 import { results } from "./results"
 
-const weekResults: {[key: string]: string[]} = {
-    'Finds an Advantage': ['Jawan', 'Alex'],
-    'Goes on a Journey': ['Matt', 'Jake', 'Jawan'],
-'Losing Tribe': ['Kele'],
-'Voted Out': ['Annie']
+const weekResults = {
+    "Losing tribe (1 point)": ['Kele'],
+    "Voted out (2 point)": ['Jeremiah'],
+    "Finds an advantage/idol/clue (1 point)": ['MC'],
+    "Uses an advantage/idol/clue (1 point)": ['Alex'],
+    "Uses SITD (1 point)": [] as string[],
+    "Goes on a journey (1 point)": [] as string[],
+}
+
+const seasonResults: { [key: string]: string[] } = {
+    "Medevacked out (4 points)": ['Jake']
 }
 
 
@@ -37,7 +43,7 @@ type ResponderPicks = {
     score: number;
 }
 
-const getResponderData = (row: string, columns: string[]): {
+const getResponderDataWeek1 = (row: string, columns: string[]): {
     name?: string;
     picks?: ResponderPicks;
 } => {
@@ -93,11 +99,60 @@ const getResponderData = (row: string, columns: string[]): {
     return response;
 };
 
+const getResponderDataCurrentWeek = (row: string[], columns: string[], contestant: ContestantScore) => {
+    const newDetails = JSON.parse(JSON.stringify(contestant));
+    newDetails.weeklyPicks = {};
+    for (let j = 1; j < columns.length; j++) {
+        const columnName = columns[j];
+        const columnTitle = columnName.split(' (')[0];
+        if(columnName === 'Name' || columnName.includes('Do you want to change your sole survivor for a decrease in points?')) {
+            continue;
+        }
+        if (columnName.includes('Sole Survivor')) {
+            const match = columnName.match(/\[(.*?)\]/);
+            if (match?.[1] && row[j] && row[j] !== contestant.seasonPicks['Sole Survivor'].pick) {
+                newDetails.seasonPicks['Sole Survivor'].pick = row[j];
+                newDetails.seasonPicks['Sole Survivor'].points = parseInt(match[1][0])
+            }
+            continue;
+        }
+
+        const title = WeeklyPicksTranslations[columnTitle];
+        const pointsMatch = columnName.match(/\((.*?)\)/);
+        const pick = row[j];
+        const keyForPick = title ?? columnTitle
+        newDetails.weeklyPicks[keyForPick] = {
+            pick,
+            points: pointsMatch?.[1] ? parseInt(pointsMatch[1][0]) : undefined
+        };
+        const columnWeekResults = weekResults[columnName as keyof typeof weekResults];
+        if(columnWeekResults?.includes(pick) && pointsMatch?.[1]) {
+            newDetails.score += parseInt(pointsMatch[1][0]);
+            newDetails.scoreChange += parseInt(pointsMatch[1][0]);
+        }
+
+    }
+    return newDetails;
+};
+
+
 const buildResponses = (columns: string[], rows: string[]) => {
     const responses:{[key: string]: ResponderPicks | undefined} = {};
+    const nameIndex = columns.findIndex(column => column.includes('Name'));
     for (let i = 1; i < rows.length; i++) {
-        const responderPicks = getResponderData(rows[i], columns);
-        responses[responderPicks?.name!] = responderPicks.picks;
+        const entries = rows[i].split(',');
+        const name = entries[nameIndex].trim() as ContestantKey;
+        if(Contestants[name] === undefined) {
+            console.log(`Unknown contestant: ${name}`);
+            continue;
+        }
+        const responderPicks = getResponderDataCurrentWeek(entries, columns, Contestants[name]);
+        if(name === 'William') {
+            responderPicks.score += 4;
+            responderPicks.scoreChange += 4;
+        }
+        console.log(`Week 3 ${name}\nScore: ${responderPicks.score}\nScore Change: ${responderPicks.scoreChange}`);
+        responses[name] = responderPicks;
     }
     return responses;
 }
@@ -108,7 +163,21 @@ const parseCSVWeek1 = (data: string) => {
     const responses = buildResponses(columns, rows);
 }
 
+const parseCurrentWeek = (data: string) => {
+    const rows = grabRows(data);
+    const columns = grabColumns(rows);
+    const responses = buildResponses(columns, rows);
+    console.log(responses);
+}
+
 export const scoreUpdate = () => {
-    parseCSVWeek1(results);
+    parseCurrentWeek(results);
     console.log('Score Updated');
+}
+
+export const returnColumns = () => {
+    const rows = grabRows(results);
+    const columns = grabColumns(rows);
+    console.log('Columns Returned');
+    console.log(columns);
 }

@@ -5,8 +5,8 @@ function getImageUrl(result: string) {
         return './images/yes.png';
     }
     if (result === 'No')
-        return './images/no.png';
-    return `./images/${result}.jpg`;
+        return 'images/no.png';
+    return `images/${result.toLowerCase()}.webp`;
 }
 
 export function ResultItem({contestant, selections}: Results) {

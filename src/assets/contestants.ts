@@ -46,10 +46,545 @@ export const WeeklyPicksTranslations: {[key: string]: string} = {
     'Finds an advantage/idol/clue': 'Finds an Advantage',
     'Goes on a journey': 'Goes on a Journey',
     'Losing tribe': 'Losing Tribe',
-    'Voted out': 'Voted Out'
+    'Voted out': 'Voted Out',
+    'Uses an advantage/idol/clue': 'Uses an Advantage',
 }
 
 export const Contestants = {
+    "Jesse": {
+        "scoreChange": 1,
+        "score": 1,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "MC",
+                    "Sophi",
+                    "Steven"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Sophi",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Uli",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "Savannah",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Rizo",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Sophi",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Kele",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Kristina",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Savannah",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Rizo",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Sage",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "Jeremiah",
+                "points": 1
+            }
+        }
+    },
+    "Jesse's Older Brother": {
+        "scoreChange": 0,
+        "score": 0,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "Alex",
+                    "Jawan",
+                    "Sophi"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Jawan",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Kele",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "Jeremiah",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "MC",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Nate",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Hina",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Matt",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Matt",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Matt",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Matt",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "Nate",
+                "points": 1
+            }
+        }
+    },
+    "Roy": {
+        "scoreChange": 1,
+        "score": 1,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "MC",
+                    "Nate",
+                    "Shannon"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Shannon",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Kele",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "kristina",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Jason",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Sage",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Uli",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Jawan",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Steven",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Alex",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Jawan",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "MC",
+                "points": 1
+            }
+        }
+    },
+    "William": {
+        "scoreChange": 5,
+        "score": 8,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "Savannah",
+                    "Sophie",
+                    "Steven"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Steven",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Kele",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "Jeremiah",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Jake",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Steven",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Hina",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Matt",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Steven",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Alex",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Jeremiah",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "Sage",
+                "points": 1
+            }
+        }
+    },
+    "Marco Mendez": {
+        "scoreChange": 1,
+        "score": 3,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "Jason",
+                    "Kristina",
+                    "Savannah"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Jason",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Kele",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "Nate",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Jeremiah",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Sage",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Kele",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Jake",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Alex",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Jeremiah",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Sophie",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "MC",
+                "points": 1
+            }
+        }
+    },
+    "Chris": {
+        "scoreChange": 4,
+        "score": 4,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "Jason",
+                    "Nate",
+                    "Savannah"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Jason",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Hina",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "kristina",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Matt",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Rizo",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Kele",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Jeremiah",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Shannon",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Alex",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Sophi",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "Savannah",
+                "points": 1
+            }
+        }
+    },
+    "Drew": {
+        "scoreChange": 1,
+        "score": 4,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "Alex",
+                    "Sophi",
+                    "Steven"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Steven",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Kele",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "Sage",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Nate",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Rizo",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Uli",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Shannon",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "MC",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Jawan",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Nate",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "Sophi",
+                "points": 1
+            }
+        }
+    },
+    "Kyle Macchi": {
+        "scoreChange": 1,
+        "score": 5,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "Matt",
+                    "Savannah",
+                    "Sophi"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Matt",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Kele",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "kristina",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Steven",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Jake",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Uli",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Jawan",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Savannah",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Alex",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Jeremiah",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "Steven",
+                "points": 1
+            }
+        }
+    },
+    "Kevin": {
+        "scoreChange": 0,
+        "score": 0,
+        "seasonPicks": {
+            "Final 3": {
+                "pick": [
+                    "Rizo",
+                    "Savannah",
+                    "Sophi"
+                ]
+            },
+            "Sole Survivor": {
+                "pick": "Savannah",
+                "points": 26
+            },
+            "Worst tribe based on numbers at merge": {
+                "pick": "Kele",
+                "points": 5
+            },
+            "Quits": {
+                "pick": "Matt",
+                "points": 4
+            },
+            "Medevacked out": {
+                "pick": "Matt",
+                "points": 4
+            },
+            "Most Confessional Time of the Season": {
+                "pick": "Rizo",
+                "points": 8
+            }
+        },
+        "weeklyPicks": {
+            "Losing Tribe": {
+                "pick": "Uli",
+                "points": 1
+            },
+            "Voted Out": {
+                "pick": "Jawan",
+                "points": 2
+            },
+            "Finds an Advantage": {
+                "pick": "Rizo",
+                "points": 1
+            },
+            "Uses an Advantage": {
+                "pick": "Jawan",
+                "points": 1
+            },
+            "Uses SITD": {
+                "pick": "Jawan",
+                "points": 1
+            },
+            "Goes on a Journey": {
+                "pick": "Jake",
+                "points": 1
+            }
+        }
+    }
+} as const;
+
+export const ContestantsLastWeek = {
     "Kevin": {
         "scoreChange": 0,
         "score": 0,
@@ -121,7 +656,7 @@ export const Contestants = {
                 "points": 5
             },
             "Quits": {
-                "pick": "Kristinia",
+                "pick": "kristina",
                 "points": 4
             },
             "Medevacked out": {
@@ -139,7 +674,7 @@ export const Contestants = {
                 "points": 1
             },
             "Voted out": {
-                "pick": "Kristinia",
+                "pick": "kristina",
                 "points": 2
             },
             "Finds an advantage/idol/clue": {
@@ -152,7 +687,7 @@ export const Contestants = {
             }
         }
     },
-    "William Ridley": {
+    "William": {
         "scoreChange": 0,
         "score": 3,
         "seasonPicks": {
@@ -194,7 +729,7 @@ export const Contestants = {
                 "points": 2
             },
             "Finds an advantage/idol/clue": {
-                "pick": "Kristinia",
+                "pick": "kristina",
                 "points": 1
             },
             "Goes on a journey": {
@@ -249,7 +784,7 @@ export const Contestants = {
                 "points": 1
             },
             "Goes on a journey": {
-                "pick": "Kristinia",
+                "pick": "kristina",
                 "points": 1
             }
         }
@@ -274,7 +809,7 @@ export const Contestants = {
                 "points": 5
             },
             "Quits": {
-                "pick": "Kristinia",
+                "pick": "kristina",
                 "points": 4
             },
             "Medevacked out": {
@@ -325,7 +860,7 @@ export const Contestants = {
                 "points": 5
             },
             "Quits": {
-                "pick": "Kristinia",
+                "pick": "kristina",
                 "points": 4
             },
             "Medevacked out": {
@@ -458,7 +993,7 @@ export const Contestants = {
             }
         }
     },
-    "Jesse's Older Brtother": {
+    "Jesse's Older Brother": {
         "scoreChange": 0,
         "score": 0,
         "seasonPicks": {
@@ -511,8 +1046,11 @@ export const Contestants = {
     }
 } as const;
 
+
 export type WeeklyPickTypes = keyof typeof Contestants.Drew.weeklyPicks;
+export type SeasonPickTypes = keyof typeof Contestants.Drew.seasonPicks;
 
 export type ContestantKey = keyof typeof Contestants;
+export type ContestantScore = typeof Contestants[ContestantKey];
 
 export const CONTESTANT_LIST: ContestantKey[] = Object.keys(Contestants) as ContestantKey[];
