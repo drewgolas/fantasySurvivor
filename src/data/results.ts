@@ -1,10 +1,10 @@
-export const results = `Timestamp,Name,Do you want to change your sole survivor for a decrease in points?,Sole Survivor (24 points),Losing tribe (1 point),Voted out (2 point),Finds an advantage/idol/clue (1 point),Uses an advantage/idol/clue (1 point),Uses SITD (1 point),Goes on a journey (1 point)
-10/6/2025 10:01:35,Jesse,No,,Kele,Kristinia,Savannah,Rizo,Sage,Jeremiah
-10/6/2025 10:05:26,Jesse's Older Brother ,No,,Hina,Matt,Matt,Matt,Matt,Nate
-10/7/2025 1:59:55,Roy,No,,Uli,Jawan,Steven,Alex,Jawan,MC
-10/8/2025 9:17:51,William,No,,Hina,Matt,Steven,Alex,Jeremiah,Sage
-10/8/2025 12:27:04,Marco Mendez,No,,Kele,Jake,Alex,Jeremiah,Sophie,MC
-10/8/2025 14:19:19,Chris,No,,Kele,Jeremiah,Shannon,Alex,Sophi,Savannah
-10/8/2025 18:02:25,Drew,No,,Uli,Shannon,MC,Jawan,Nate,Sophi
-10/8/2025 20:36:22,Kyle Macchi,No,,Uli,Jawan,Savannah,Alex,Jeremiah,Steven
-10/8/2025 22:23:27,Kevin,No,,Uli,Jawan,Rizo,Jawan,Jawan,Jake`
+export const results = `Timestamp,Name,Do you want to change your sole survivor for a decrease in points?,Sole Survivor (22 points),Voted out (2 point),Finds an advantage/idol/clue (1 point),Uses an advantage/idol/clue (1 point),Uses SITD (1 point),Goes on a journey (1 point),Says the title (1 point),Betrays their OG tribe (1 point),Catchphrase of the Week (1 point)
+10/13/2025 13:26:30,Jesse,No,,Matt,Nate,Rizo,Savannah,Steven,Sophi,Jawan,Yes
+10/14/2025 17:53:10,Marco Mendez,No,,Sage,Steven,Alex,Jawan,Sophi,Savannah,Sophi,No
+10/14/2025 18:35:46,William,No,,Sophie,Sophi,Alex,Sophi,Sage,Rizo,Alex,No
+10/14/2025 19:14:11,Jesse's older brother ,No,,Sage,Savannah,Savannah,MC,Alex,Rizo,Sophi,Yes
+10/15/2025 11:59:37,Roy,No,,Jawan,Steven,Alex,Jason,Kristinia,Rizo,Jawan,No
+10/15/2025 13:25:53,Drew,No,,Matt,Rizo,Rizo,Sophi,Nate,Matt,Jason,Yes
+10/15/2025 16:37:51,Kevin,No,,Sage,Rizo,Rizo,Sage,Alex,Rizo,Sophi,Yes
+10/15/2025 17:03:19,Kyle Macchi,No,,Sage,Rizo,Rizo,Alex,Matt,Sophi,Savannah,No
+10/15/2025 17:14:09,Chris,No,,Sage,Rizo,Rizo,Sage,Sophie,Sage,Savannah,Yes`

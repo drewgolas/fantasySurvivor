@@ -2,13 +2,26 @@ import { ContestantKey, Contestants, ContestantScore, SeasonPickKey, SeasonPickP
 import { results } from "./results"
 
 const weekResults = {
-    "Losing tribe (1 point)": ['Kele'],
-    "Voted out (2 point)": ['Jeremiah'],
-    "Finds an advantage/idol/clue (1 point)": ['MC'],
-    "Uses an advantage/idol/clue (1 point)": ['Alex'],
-    "Uses SITD (1 point)": [] as string[],
-    "Goes on a journey (1 point)": [] as string[],
+    "Voted out": ["Matt"],
+    "Finds an advantage/idol/clue": ["Savannah", "Rizo"],
+    "Uses an advantage/idol/clue": [] as string[],
+    "Uses SITD": [] as string[],
+    "Goes on a journey": [] as string[],
+    "Says the title": ["Nate"],
+    "Betrays their OG tribe": ["Jason"],
+    "Catchphrase of the Week": ["No"]
 }
+
+const columnNames = [
+    "Voted out (2 point)",
+    "Finds an advantage/idol/clue (1 point)",
+    "Uses an advantage/idol/clue (1 point)",
+    "Uses SITD (1 point)",
+    "Goes on a journey (1 point)",
+    "Says the title (1 point)",
+    "Betrays their OG tribe (1 point)",
+    "Catchphrase of the Week (1 point)"
+];
 
 const seasonResults: { [key: string]: string[] } = {
     "Medevacked out (4 points)": ['Jake']
@@ -125,35 +138,82 @@ const getResponderDataCurrentWeek = (row: string[], columns: string[], contestan
             pick,
             points: pointsMatch?.[1] ? parseInt(pointsMatch[1][0]) : undefined
         };
-        const columnWeekResults = weekResults[columnName as keyof typeof weekResults];
-        if(columnWeekResults?.includes(pick) && pointsMatch?.[1]) {
-            newDetails.score += parseInt(pointsMatch[1][0]);
-            newDetails.scoreChange += parseInt(pointsMatch[1][0]);
-        }
+        // const columnWeekResults = weekResults[columnName as keyof typeof weekResults];
+        // if(columnWeekResults?.includes(pick) && pointsMatch?.[1]) {
+        //     newDetails.score += parseInt(pointsMatch[1][0]);
+        //     newDetails.scoreChange += parseInt(pointsMatch[1][0]);
+        // }
 
     }
     return newDetails;
 };
 
+const getScoreChanges = (oldDetails: ContestantScore) => {
+    let scoreChange = 0;
+    Object.keys(weekResults).forEach((key) => {
+        const weekResult = weekResults[key as keyof typeof weekResults];
+        const weeklyPickKey = WeeklyPicksTranslations[key] as keyof typeof oldDetails.weeklyPicks;
+        if(!oldDetails.weeklyPicks[weeklyPickKey]) {
+            console.log(`No pick for ${weeklyPickKey}`);
+            return;
+        }
+        if(weekResult.includes(oldDetails.weeklyPicks[weeklyPickKey].pick)) {
+            scoreChange += oldDetails.weeklyPicks[weeklyPickKey].points ?? 0;
+        }
+    });
+    return {
+        ...oldDetails,
+        scoreChange,
+        score: oldDetails.score + scoreChange
+    }
+}
+
+const updateList = (list: string[], name: string) => {
+    return list.filter(item => item !== name);
+}
+
+const getResponderEmptyWeekResponse = (columns: string[], contestant: ContestantScore) => {
+    const newDetails = JSON.parse(JSON.stringify(contestant));
+    newDetails.weeklyPicks = {};
+    for (let j = 1; j < columns.length; j++) {
+        const columnName = columns[j];
+        const columnTitle = columnName.split(' (')[0];
+        const title = WeeklyPicksTranslations[columnTitle];
+        if(!title) {
+            continue;
+        }
+        const pointsMatch = columnName.match(/\((.*?)\)/);
+        const pick = '';
+        const keyForPick = title ?? columnTitle
+        newDetails.weeklyPicks[keyForPick] = {
+            pick,
+            points: pointsMatch?.[1] ? parseInt(pointsMatch[1][0]) : undefined
+        };
+    }
+    return newDetails;
+};
 
 const buildResponses = (columns: string[], rows: string[]) => {
     const responses:{[key: string]: ResponderPicks | undefined} = {};
     const nameIndex = columns.findIndex(column => column.includes('Name'));
+    let contestantList = Contestants ? Object.keys(Contestants) : [];
     for (let i = 1; i < rows.length; i++) {
         const entries = rows[i].split(',');
         const name = entries[nameIndex].trim() as ContestantKey;
-        if(Contestants[name] === undefined) {
+        if(!contestantList.includes(name)) {
             console.log(`Unknown contestant: ${name}`);
             continue;
         }
         const responderPicks = getResponderDataCurrentWeek(entries, columns, Contestants[name]);
-        if(name === 'William') {
-            responderPicks.score += 4;
-            responderPicks.scoreChange += 4;
-        }
-        console.log(`Week 3 ${name}\nScore: ${responderPicks.score}\nScore Change: ${responderPicks.scoreChange}`);
+        contestantList = updateList(contestantList, name);
         responses[name] = responderPicks;
     }
+    
+    contestantList.forEach(name => {
+        const contestant = Contestants[name as ContestantKey];
+        const responderPicks = getResponderEmptyWeekResponse(columns, contestant);
+        responses[name] = responderPicks;
+    });
     return responses;
 }
 
@@ -171,6 +231,19 @@ const parseCurrentWeek = (data: string) => {
 }
 
 export const scoreUpdate = () => {
+    const contestantObject = JSON.parse(JSON.stringify(Contestants));
+    const contestantList = Contestants ? Object.keys(Contestants) : [];
+    contestantList.forEach(name => {
+        const contestant = Contestants[name as ContestantKey];
+        const updatedContestant = getScoreChanges(contestant);
+        contestantObject[name as ContestantKey] = updatedContestant;
+        console.log(`${name} Score Change: ${updatedContestant.scoreChange}, to ${updatedContestant.score}`);
+    })
+    console.log('Score Updated');
+    console.log(contestantObject);
+}
+
+export const pickUpdate = () => {
     parseCurrentWeek(results);
     console.log('Score Updated');
 }

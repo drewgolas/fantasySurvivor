@@ -46,3 +46,7 @@
         font-weight: 700
     }
 }
+
+.no_pick {
+    filter: blur(5px);
+}

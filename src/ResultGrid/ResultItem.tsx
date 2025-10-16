@@ -4,7 +4,7 @@ function getImageUrl(result: string) {
     if (result === 'Yes') {
         return './images/yes.png';
     }
-    if (result === 'No')
+    if (result === 'No' || result === '' || !result)
         return 'images/no.png';
     return `images/${result.toLowerCase()}.webp`;
 }

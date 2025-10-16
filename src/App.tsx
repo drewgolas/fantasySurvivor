@@ -3,13 +3,17 @@ import './App.css';
 import { SeasonPicks } from './SeasonPicks/SeasonPicks';
 import { Score } from './Score/Score';
 import { WeeklyPicks } from './WeeklyPicks/WeeklyPicks';
-import { returnColumns, scoreUpdate } from './data/dataConversion';
+import { pickUpdate, returnColumns, scoreUpdate } from './data/dataConversion';
 const image = require('./assets/images/Survivor_49.png');
 
 function App() {
   const [currentView, setCurrentView] = useState('Score');
+  
   const onScoreUpdate = () => {
     scoreUpdate();
+  }
+  const onPickUpdate = () => {
+    pickUpdate();
   }
     const onColumnUpdate = () => {
     returnColumns();
@@ -23,7 +27,8 @@ function App() {
         <button className={`menu-button ${currentView === 'Week' ? 'selected': ''}`} onClick={() => setCurrentView('Week')}>Weekly Picks</button>
         <button className={`menu-button ${currentView === 'Season' ? 'selected': ''}`} onClick={() => setCurrentView('Season')}>Season Picks</button>
       </div>
-      {/* <button onClick={onScoreUpdate}>Update Scores</button>
+      {/* <button onClick={onPickUpdate}>Update Picks</button>
+      <button onClick={onScoreUpdate}>Update Score</button>
       <button onClick={onColumnUpdate}>Update Columns</button> */}
 
       {currentView === 'Score' &&

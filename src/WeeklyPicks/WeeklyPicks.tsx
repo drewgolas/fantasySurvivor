@@ -3,19 +3,6 @@ import { ResultGrid } from "../ResultGrid/ResultGrid";
 import { CONTESTANT_LIST, Contestants, WeeklyPickTypes } from "../assets/contestants";
 
 
-// function csvResultsToArr(results: string[], columns: string[]) {
-//     const rows = results.slice(1).map((row) => row.split(','));
-//     let finalResults: { [key: string]: any } = {};
-//     for (let i = 1; i < columns.length; i++) {
-//         finalResults[columns[i]] = {};
-//         rows.forEach(row => {
-//             finalResults[columns[i]][row[0]] = row[i];
-//         })
-//     }
-//     return finalResults;
-// }
-
-
 export function WeeklyPicks() {
     const [curPick, setCurPick] = useState<WeeklyPickTypes | 'scrollView'>('Voted Out');
     const categories = Contestants.Drew ? Object.keys(Contestants.Drew.weeklyPicks) as WeeklyPickTypes[] : [];
@@ -38,8 +25,8 @@ export function WeeklyPicks() {
                         return {
                             contestant: cont,
                             selections: [{
-                                pick: contestant.weeklyPicks[curPick].pick,
-                                className: '',
+                                pick: contestant.weeklyPicks[curPick]?.pick,
+                                className: contestant.weeklyPicks[curPick]?.pick as string === '' ? 'no_pick' : '',
                             }]
                         }
                     })}
@@ -57,8 +44,8 @@ export function WeeklyPicks() {
                             return {
                                 contestant: cont,
                                 selections: [{
-                                    pick: contestant.weeklyPicks[col as WeeklyPickTypes].pick,
-                                    className: '',
+                                    pick: contestant.weeklyPicks[col as WeeklyPickTypes]?.pick,
+                                    className: contestant.weeklyPicks[col as WeeklyPickTypes]?.pick as string === '' ? 'no_pick' : '',
                                 }]
                             }
                         })}
