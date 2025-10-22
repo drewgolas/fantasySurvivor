@@ -1,4 +1,4 @@
-export const results = `Timestamp,Name,Do you want to change your sole survivor for a decrease in points?,Sole Survivor (20 points),Voted out (2 point),Finds an advantage/idol/clue (1 point),Uses an advantage/idol/clue (1 point),Uses SITD (1 point),Goes on a journey (1 point),Says the title (1 point),Betrays their OG tribe (1 point),Catchphrase of the Week (1 point)
+Timestamp,Name,Do you want to change your sole survivor for a decrease in points?,Sole Survivor (20 points),Voted out (2 point),Finds an advantage/idol/clue (1 point),Uses an advantage/idol/clue (1 point),Uses SITD (1 point),Goes on a journey (1 point),Says the title (1 point),Betrays their OG tribe (1 point),Catchphrase of the Week (1 point)
 10/20/2025 12:43:24,William Ridley,No,,Sage,Sage,Rizo,Shannon,MC,Sage,Shannon,No
 10/20/2025 13:38:24,Kyle Macchi,Yes,Rizo,Shannon,MC,Rizo,Sage,Kristina,Sage,Sage,No
 10/20/2025 14:01:46,Kevin,No,,Shannon,Steven,Sage,Sage,Jason,Savannah,Shannon,No
@@ -7,4 +7,4 @@ export const results = `Timestamp,Name,Do you want to change your sole survivor 
 10/20/2025 15:20:24,Jesse,No,,Jason,MC,Rizo,Sophie,Sophi,Jawan,Sage,Yes
 10/21/2025 19:00:17,Chris,No,,Kristina,Sophie,Sophie,Sage,MC,Steven,Nate,Yes
 10/21/2025 19:25:33,Marco Mendez,No,,Jason,Rizo,MC,Jason,Nate,Sophie,Jason,No
-10/21/2025 20:14:39,Drew,No,,Savannah,MC,Rizo,Jason,Shannon,Savannah,Savannah,Yes`
+10/21/2025 20:14:39,Drew,No,,Savannah,MC,Rizo,Jason,Shannon,Savannah,Savannah,Yes

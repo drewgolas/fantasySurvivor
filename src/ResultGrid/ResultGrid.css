@@ -4,11 +4,6 @@
     margin: 0px 10px;
 }
 
-.result-heading {
-    font-size: 48px;
-    margin-bottom: 6px;
-}
-
 .result-grid-items {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;

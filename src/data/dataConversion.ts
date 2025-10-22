@@ -13,6 +13,9 @@ const weekResults = {
 }
 
 const columnNames = [
+    "Name",
+    "Do you want to change your sole survivor for a decrease in points?",
+    "Sole Survivor (20 points)",
     "Voted out (2 point)",
     "Finds an advantage/idol/clue (1 point)",
     "Uses an advantage/idol/clue (1 point)",

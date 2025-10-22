@@ -22,6 +22,15 @@
     color: green;
 }
 
+.winning-contestant {
+    background-color: rgb(83, 194, 92, .8);
+}
+
+.big-change {
+    font-weight: 700;
+    background-color: rgb(83, 194, 92, .4);
+}
+
 .score {
     position: relative;
     h1 {
@@ -40,4 +49,46 @@
     margin: 0;
     rotate: 32deg;
     right: 25%;
+}
+
+.sole_survivor_image {
+    object-fit: contain;
+    border-radius: 25px;
+    max-height: -webkit-fill-available;
+}
+.sole_survivor_img_container {
+    max-width: 50%
+}
+
+.standard-grid-row {
+    display:flex;
+    justify-content: space-around;
+    max-height: 250px;
+}
+
+.score-details {
+    width: 50%;
+    text-align: left;
+
+    h3 {
+        margin-bottom: 0;
+    }
+}
+
+table {
+    max-width: 700px;
+    margin: auto;
+}
+
+tr *:nth-child(1) {
+    width: 50%;
+}
+
+tr *:nth-child(2),
+tr *:nth-child(3) {
+    width: 25%;
+}
+
+.competitor_row_leaderboard {
+    text-align: left;
 }

@@ -27,9 +27,9 @@ function App() {
         <button className={`menu-button ${currentView === 'Week' ? 'selected': ''}`} onClick={() => setCurrentView('Week')}>Weekly Picks</button>
         <button className={`menu-button ${currentView === 'Season' ? 'selected': ''}`} onClick={() => setCurrentView('Season')}>Season Picks</button>
       </div>
-      {/* <button onClick={onPickUpdate}>Update Picks</button>
+      <button onClick={onPickUpdate}>Update Picks</button>
       <button onClick={onScoreUpdate}>Update Score</button>
-      <button onClick={onColumnUpdate}>Update Columns</button> */}
+      <button onClick={onColumnUpdate}>Update Columns</button>
 
       {currentView === 'Score' &&
         <Score />

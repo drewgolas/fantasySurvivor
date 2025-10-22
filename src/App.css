@@ -22,9 +22,46 @@ html, body {
   margin: 0px 10px;
 }
 
+.standard-grid-rows {
+  background-color: rgba(255, 255, 255, 0.24);
+  border-radius: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.standard-grid-row {
+  padding:10px;
+}
+
+.leaderboard-table {
+  margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+.standard-grid-row:nth-child(even),
+.leaderboard-row:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+.leaderboard-row.winning-contestant {
+  background-color: rgb(83, 194, 92, .8);
+}
+
 .result-heading {
+  border: 2px black solid;
+  border-bottom: none;
+  display: inline-block;
+  padding: 0 20px;
   font-size: 48px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 20px 20px 0px 0px;
 }
 
 .standard-grid-items {
